@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="gameList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="game" type="GameType" maxOccurs="unbounded" minOccurs="0">
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GameType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="path"/>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="desc"/>
+      <xs:element type="xs:string" name="image"/>
+      <xs:element type="xs:float" name="rating"/>
+      <xs:element type="xs:string" name="releasedate"/>
+      <xs:element type="xs:string" name="developer"/>
+      <xs:element type="xs:string" name="publisher"/>
+      <xs:element type="xs:string" name="genre"/>
+      <xs:element type="xs:int" name="players"/>
+      <xs:element type="xs:string" name="genres"/>
+      <xs:element type="xs:string" name="region"/>
+      <xs:element type="xs:string" name="romtype"/>
+    </xs:sequence>
+    <xs:attribute type="xs:int" name="id" use="optional"/>
+    <xs:attribute type="xs:string" name="source" use="optional"/>
+  </xs:complexType>
+</xs:schema>
